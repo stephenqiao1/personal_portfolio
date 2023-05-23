@@ -1,0 +1,38 @@
+{
+  "name": "personal_portfolio",
+  "version": "1.0.0",
+  "description": "Stephen's Website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenqiao1/personal_portfolio.git"
+  },
+  "keywords": [],
+  "author": "Stephen Qiao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stephenqiao1/personal_portfolio/issues"
+  },
+  "homepage": "https://github.com/stephenqiao1/personal_portfolio#readme",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.1",
+    "@chakra-ui/theme-tools": "^2.0.17",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.12.12",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-next": "^13.4.3",
+    "prettier": "^2.8.8"
+  }
+}
