@@ -10,7 +10,6 @@ import {
   Menu,
   MenuItem,
   MenuList,
-  MenuLink,
   MenuButton,
   IconButton,
   useColorModeValue
@@ -84,7 +83,7 @@ const Navbar = props => {
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
-            <ThemeToggleButton />
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
@@ -94,20 +93,20 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <MenuItem as={MenuLink} href="/">
-                    About
+                <MenuItem as={NextLink} href="/">
+                  About
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/projects">
-                    Projects
+                <MenuItem as={NextLink} href="/projects">
+                  Projects
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/skills">
-                    Skills
+                <MenuItem as={NextLink} href="/skills">
+                  Skills
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/experience">
-                    Work Experience
+                <MenuItem as={NextLink} href="/experience">
+                  Work Experience
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/books">
-                    Reading List
+                <MenuItem as={NextLink} href="/books">
+                  Reading List
                 </MenuItem>
               </MenuList>
             </Menu>

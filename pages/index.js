@@ -5,107 +5,150 @@ import {
   Image,
   useColorModeValue,
   Link,
-  NextLink,
-  Button
+  SimpleGrid,
+  Button,
+  List,
+  ListItem
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
+import NextLink from 'next/link'
+import Layout from '../components/layouts/article'
+import { GridItem } from '../components/grid-item'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 const Page = () => {
   return (
-    <Container>
-      <Box
-        borderRadius="lg"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        p={3}
-        mb={6}
-        align="center"
-      >
-        Hello, I&apos;m a full-stack developer based in Canada!
-      </Box>
-
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Stephen Qiao
-          </Heading>
-          <p>Creative Engineer ( Artist / Developer / Designer )</p>
-        </Box>
+    <Layout>
+      <Container>
         <Box
-          flexShrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
+          borderRadius="lg"
+          bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          p={3}
+          mb={6}
           align="center"
         >
-          <Image
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            maxWidth="100px"
-            display="inline-block"
-            borderRadius="full"
-            src="/images/stephen.jpg"
-            alt="Profile Image"
-          />
+          Hello, I&apos;m a full-stack developer based in Canada!
         </Box>
-      </Box>
-      <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Work
-        </Heading>
-        <Paragraph>
-          {/* Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <Link as={NextLink} href="/works/inkdrop" passHref scroll={false}>
-            Inkdrop
-          </Link>
-          . He publishes content for marketing his products and his YouTube
-          channel called &quot;
-          <Link
-            as={NextLink}
-            href="https://www.youtube.com/devaslife"
-            passHref
-            target="_blank"
+
+        <Box display={{ md: 'flex' }}>
+          <Box flexGrow={1}>
+            <Heading as="h2" variant="page-title">
+              Stephen Qiao
+            </Heading>
+            <p>Student Engineer ( Developer / Engineer )</p>
+          </Box>
+          <Box
+            flexShrink={0}
+            mt={{ base: 4, md: 0 }}
+            ml={{ md: 6 }}
+            align="center"
           >
-            Dev as Life
-          </Link>
-          &quot; has more than 100k subscribers. */}
-          Stephen Qiao is an undergraduate student at UBC (University of British Columbia), studying electrical engineering. He has a passion for Space, AI, and anything related to physics and engineering.
-          When he is getting bored with work, he likes to spend time on his hobbies: reading, drawing, snowboarding, and playing the guitar. Currently, he is working on a big project that he hopes many will love
-          called{' '}
-          <Link as={NextLink} href="/projects/prodoro" passHref scroll={false}>
-            Prodoro
-          </Link>
-          .
-        </Paragraph>
-        <Box align="center" my={4}>
-          <Button
-            as={NextLink}
-            href="/projects"
-            scroll={false}
-            rightIcon={<ChevronRightIcon />}
-            colorScheme="teal"
-          >
-            My Projects
-          </Button>
+            <Image
+              borderColor="whiteAlpha.800"
+              borderWidth={2}
+              borderStyle="solid"
+              maxWidth="100px"
+              display="inline-block"
+              borderRadius="full"
+              src="/images/stephen.jpg"
+              alt="Profile Image"
+            />
+          </Box>
         </Box>
-      </Section>
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
+        <Section delay={0.1}>
+          <Heading as="h3" variant="section-title">
+            Work
+          </Heading>
+          <Paragraph>
+            Stephen Qiao is an undergraduate student at UBC (University of
+            British Columbia), studying electrical engineering. He has a passion
+            for Space, AI, and anything related to physics and engineering. When
+            he is getting bored with work, he likes to spend time on his
+            hobbies: reading, drawing, snowboarding, and playing the guitar.
+            Currently, he is working on a big project that he hopes many will
+            love called{' '}
+            <Link
+              as={NextLink}
+              href="/projects/prodoro"
+              passHref
+              scroll={false}
+            >
+              Prodoro
+            </Link>
+            .
+          </Paragraph>
+          <Box align="center" my={4}>
+            <NextLink href="/projects" passHref>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                My Projects
+              </Button>
+            </NextLink>
+          </Box>
+        </Section>
+        <Section delay={0.2}>
+          <Heading as="h3" variant="section-title">
+            Bio
+          </Heading>
+          <BioSection>
             <BioYear>2001</BioYear>
             Born in Toronto, Canada.
-        </BioSection>
-      </Section>
-    </Container>
+          </BioSection>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/stephenqiao1" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoGithub />}
+                >
+                  @stephenqiao1
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://linkedin.com/in/stephen-qiao" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<IoLogoLinkedin />}
+                >
+                  @stephen-qiao
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="mailto:stephenqiao123@gmail.com" target="_blank">
+                <Button
+                  variant="ghost"
+                  colorScheme="teal"
+                  leftIcon={<EmailIcon />}
+                >
+                  stephenqiao123@gmail.com
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            Resume
+          </Heading>
+          <Link href="/docs/resume.pdf" isExternal>
+            <Button variant="ghost" colorScheme="teal">
+              Download My Resume
+            </Button>
+          </Link>
+        </Section>
+      </Container>
+    </Layout>
   )
 }
 
