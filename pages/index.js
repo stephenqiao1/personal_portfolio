@@ -5,7 +5,6 @@ import {
   Image,
   useColorModeValue,
   Link,
-  SimpleGrid,
   Button,
   List,
   ListItem
@@ -16,7 +15,6 @@ import { ChevronRightIcon, EmailIcon } from '@chakra-ui/icons'
 import { BioSection, BioYear } from '../components/bio'
 import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
-import { GridItem } from '../components/grid-item'
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 
 const Page = () => {

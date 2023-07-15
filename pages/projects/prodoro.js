@@ -22,8 +22,8 @@ import {
         <List ml={4} my={4}>
           <ListItem>
             <Meta>Website</Meta>
-            <Link href="https://www.prodoro.co/">
-              https://www.prodoro.co/ <ExternalLinkIcon mx="2px" />
+            <Link href="https://www.prodoro.io/">
+              https://www.prodoro.io/ <ExternalLinkIcon mx="2px" />
             </Link>
           </ListItem>
           <ListItem>

@@ -1,0 +1,76 @@
+{
+  "polyfillFiles": [
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
+  ],
+  "devFiles": [],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [
+    "static/qcEwGS4YeW5TS6VpGwYoC/_buildManifest.js",
+    "static/qcEwGS4YeW5TS6VpGwYoC/_ssgManifest.js"
+  ],
+  "rootMainFiles": [],
+  "pages": {
+    "/": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/ae51ba48-ef5c3b837f6f87b6.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/index-749f3d06f4f4abb0.js"
+    ],
+    "/404": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/404-4293a294e05e665f.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/_app-3b729cd1166ecf0d.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
+    ],
+    "/books": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/books-0fd9485ec03af34f.js"
+    ],
+    "/projects": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/projects-f536a02d2fa26359.js"
+    ],
+    "/projects/elec291_project": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/projects/elec291_project-bea1a1df930131fc.js"
+    ],
+    "/projects/prodoro": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/projects/prodoro-a2b3021f62767ee5.js"
+    ],
+    "/skills": [
+      "static/chunks/webpack-2d6c20b89449f43d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-285f56d3e46ff5e9.js",
+      "static/chunks/864-d33440d26c829c47.js",
+      "static/chunks/pages/skills-3c9d29c29e2139b2.js"
+    ]
+  },
+  "ampFirstPages": []
+}

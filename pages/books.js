@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Box, Text, Divider, List, ListItem, Badge } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Box, Text, Divider, Badge } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 
 const Books = () => {
@@ -21,7 +21,7 @@ const Books = () => {
         </Heading>
 
         <Text fontSize={18} mb={4}>
-          I enjoy reading as a way to learn and relax. Here's a list of books I've read, as well as those I'm currently reading.
+          I enjoy reading as a way to learn and relax. Here&apos;s a list of books I&apos;ve read, as well as those I&apos;m currently reading.
         </Text>
 
         <Divider mb={6} />

@@ -1,11 +1,9 @@
 import {
     Container,
     Badge,
-    Link,
     List,
     ListItem,
   } from '@chakra-ui/react'
-  import { ExternalLinkIcon } from '@chakra-ui/icons'
   import { Title, Meta } from '../../components/project'
   import P from '../../components/paragraph'
   import Layout from '../../components/layouts/article'
@@ -20,10 +18,10 @@ import {
           - A magnetic field controlled car with a PIC32 Timer Interrupt that measures signal pauses from a joystick controller at millisecond precision, which then converts to movement instructions.
         </P>
         <P>
-          - Implemented a following mode in the car, which tracks the transmitter at up to 100cm by detecting the strength of the magnetic field and signal strength difference between the car's left and right inductors.
+          - Implemented a following mode in the car, which tracks the transmitter at up to 100cm by detecting the strength of the magnetic field and signal strength difference between the car&apos;s left and right inductors.
         </P>
         <P>
-          - Created a ”Go Home” extra feature for the car that allows it to backtrack its movements and return to its starting location
+          - Created a &rsquo;Go Home&rsquo; extra feature for the car that allows it to backtrack its movements and return to its starting location
 using an algorithm programmed on the PIC32 in Embedded C.
         </P>
         <List ml={4} my={4}>

@@ -1,8 +1,12 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/books": "pages/books.js",
-  "/": "pages/index.js",
-  "/skills": "pages/skills.js"
+  "/books": "pages/books.html",
+  "/projects": "pages/projects.html",
+  "/404": "pages/404.html",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/skills": "pages/skills.html",
+  "/_error": "pages/_error.js",
+  "/projects/prodoro": "pages/projects/prodoro.js",
+  "/projects/elec291_project": "pages/projects/elec291_project.js"
 }
