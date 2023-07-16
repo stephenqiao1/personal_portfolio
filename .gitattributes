@@ -1,3 +1,4 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+public/videos/elec291_project2.mp4 filter=lfs diff=lfs merge=lfs -text
 .firebase/personal-portfolio-22dd4/functions/public/videos/elec291_project2.mp4 filter=lfs diff=lfs merge=lfs -text
 .firebase/personal-portfolio-22dd4/hosting/videos/elec291_project2.mp4 filter=lfs diff=lfs merge=lfs -text
