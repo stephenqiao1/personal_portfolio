@@ -1,12 +1,12 @@
 {
-  "/_document": "pages/_document.js",
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/": "pages/index.html",
   "/404": "pages/404.html",
+  "/_error": "pages/_error.js",
   "/books": "pages/books.html",
+  "/_document": "pages/_document.js",
   "/projects": "pages/projects.html",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.html",
   "/skills": "pages/skills.html",
-  "/projects/elec291_project": "pages/projects/elec291_project.js",
-  "/projects/prodoro": "pages/projects/prodoro.js"
+  "/projects/prodoro": "pages/projects/prodoro.js",
+  "/projects/elec291_project": "pages/projects/elec291_project.js"
 }
