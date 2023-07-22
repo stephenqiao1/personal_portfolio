@@ -5,12 +5,11 @@ const Books = () => {
   const finishedBooks = [
     { title: 'The Midnight Library', author: 'Matt Haig', rating: 4 },
     { title: 'If Cats Disappeared from the World', author: 'Genki Kawamura', rating: 4 },
+    { title: 'The Secret History', author: 'Donna Tartt', rating: 4 },
     // Add more finished books here
   ]
 
   const readingBooks = [
-    { title: 'The Secret History', author: 'Donna Tartt' },
-    // Add more books you're currently reading here
   ]
 
   return (
