@@ -10,6 +10,7 @@ const Books = () => {
   ]
 
   const readingBooks = [
+    { title: 'Normal People', author: 'Sally Rooney'} 
   ]
 
   return (
