@@ -51,6 +51,8 @@ const Skills = () => {
               <ListItem>ExpressJS</ListItem>
               <ListItem>Firebase</ListItem>
               <ListItem>NextJS</ListItem>
+              <ListItem>Computer Vision</ListItem>
+              <ListItem>Machine Learning</ListItem>
               {/* Add more as needed */}
             </List>
           </Box>
