@@ -5,6 +5,7 @@ import Layout from '../components/layouts/article'
 
 import thumbProdoro from '../public/images/projects/prodoro.jpg'
 import thumbMagneticCar from '../public/images/projects/elec291_project.jpg'
+import thumbTsp from '../public/images/projects/tsp_sim.jpg'
 
 const Projects = () => {
   return (
@@ -29,6 +30,19 @@ const Projects = () => {
               A magnetic field controlled car with a PIC32 Timer Interrupt that
               measures signal pauses from a joystick controller at millisecond
               precision, which then converts to movement instructions
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="tsp_sim"
+              title="Unity TSP Algorithm Visualizer"
+              thumbnail={thumbTsp}
+            >
+              This project is a Unity-based application that visualizes various
+              algorithms for solving the Traveling Salesman Problem (TSP). It
+              provides a graphical interface to place cities on a 2D grid and
+              then run different algorithms to find the shortest path that
+              visits all cities.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
