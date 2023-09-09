@@ -6,6 +6,7 @@ import Layout from '../components/layouts/article'
 import thumbProdoro from '../public/images/projects/prodoro.jpg'
 import thumbMagneticCar from '../public/images/projects/elec291_project.jpg'
 import thumbTsp from '../public/images/projects/tsp_sim.jpg'
+import thumbGesture from '../public/images/projects/gesture_cv.jpg'
 
 const Projects = () => {
   return (
@@ -43,6 +44,19 @@ const Projects = () => {
               provides a graphical interface to place cities on a 2D grid and
               then run different algorithms to find the shortest path that
               visits all cities.
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="gesture_cv"
+              title="Gesture-Controlled Light w/ Computer Vision"
+              thumbnail={thumbGesture}
+            >
+              This project showcases the integration of computer vision and IoT
+              to create a gesture-controlled lighting system. Utilizing a
+              Raspberry Pi 4 and a USB camera, the system captures real-time
+              video to recognize specific hand gestures, which then triggers a
+              relay module to control a light source.
             </WorkGridItem>
           </Section>
         </SimpleGrid>
