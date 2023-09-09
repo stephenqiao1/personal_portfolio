@@ -6,7 +6,7 @@ import Layout from '../components/layouts/article'
 import thumbProdoro from '../public/images/projects/prodoro.jpg'
 import thumbMagneticCar from '../public/images/projects/elec291_project.jpg'
 import thumbTsp from '../public/images/projects/tsp_sim.jpg'
-import thumbGesture from '../public/images/projects/gesture_cv.jpg'
+import thumbGesture from '../public/images/projects/gesture.jpg'
 
 const Projects = () => {
   return (
