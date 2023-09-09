@@ -1,6 +1,14 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/projects/gesture_cv": "pages/projects/gesture_cv.js"
+  "/404": "pages/404.html",
+  "/_error": "pages/_error.js",
+  "/books": "pages/books.html",
+  "/projects": "pages/projects.html",
+  "/": "pages/index.html",
+  "/skills": "pages/skills.html",
+  "/projects/tsp_sim": "pages/projects/tsp_sim.js",
+  "/projects/gesture_cv": "pages/projects/gesture_cv.js",
+  "/projects/elec291_project": "pages/projects/elec291_project.js",
+  "/projects/prodoro": "pages/projects/prodoro.js"
 }
