@@ -15,7 +15,8 @@ const Books = () => {
   ]
 
   const readingBooks = [
-    { title: 'Physics of The Future', author: 'Michio Kaku'}
+    { title: 'Physics of The Future', author: 'Michio Kaku'},
+    { title: 'If We Were Villians', author: 'M.L. Rio'}
   ]
 
   return (

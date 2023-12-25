@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <Layout>
       <Container>
-        <Heading as="h2" fontSize={24} mb={4}>
+        <Heading as="h2" fontSize={24} my={4}>
           Skills & Expertise
         </Heading>
 
@@ -28,6 +28,7 @@ const Skills = () => {
               <ListItem>C#</ListItem>
               <ListItem>Verilog</ListItem>
               <ListItem>Assembly</ListItem>
+              <ListItem>MATLAB</ListItem>
               {/* Add more as needed */}
             </List>
           </Box>
@@ -51,8 +52,8 @@ const Skills = () => {
               <ListItem>ExpressJS</ListItem>
               <ListItem>Firebase</ListItem>
               <ListItem>NextJS</ListItem>
-              <ListItem>Computer Vision</ListItem>
-              <ListItem>Machine Learning</ListItem>
+              <ListItem>RTOS</ListItem>
+              <ListItem>ROS</ListItem>
               {/* Add more as needed */}
             </List>
           </Box>
@@ -71,6 +72,7 @@ const Skills = () => {
               <ListItem>FPGA</ListItem>
               <ListItem>Microcontrollers</ListItem>
               <ListItem>Protocols(UART, SPI)</ListItem>
+              <ListItem>PCB Design</ListItem>
               {/* Add more as needed */}
             </List>
           </Box>
@@ -92,6 +94,8 @@ const Skills = () => {
               <ListItem>Computing Systems I</ListItem>
               <ListItem>Electronic Materials and Devices</ListItem>
               <ListItem>Electromagnetic Field and Waves</ListItem>
+              <ListItem>Systems and Control</ListItem>
+              <ListItem>Software Design for Engineers II</ListItem>
             </List>
           </Box>
         </SimpleGrid>

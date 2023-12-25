@@ -7,30 +7,46 @@ import thumbProdoro from '../public/images/projects/prodoro.jpg'
 import thumbMagneticCar from '../public/images/projects/elec291_project.jpg'
 import thumbTsp from '../public/images/projects/tsp_sim.jpg'
 import thumbGesture from '../public/images/projects/gesture.jpg'
+import thumbSnakeGame from '../public/images/projects/snake_game.png'
+import thumbChatApplication from '../public/images/projects/chat_application.png'
 
 const Projects = () => {
   return (
     <Layout>
       <Container>
-        <Heading as="h3" fontSize={20} mb={4}>
+        <Heading as="h3" fontSize={20} my={4}>
           Projects
+        </Heading>
+
+        {/* Software Projects Section */}
+        <Heading as="h4" fontSize={18} mb={4}>
+          Software Projects
         </Heading>
         <SimpleGrid columns={[1, 1, 2]} gap={6}>
           <Section>
-            <WorkGridItem id="prodoro" title="Prodoro" thumbnail={thumbProdoro}>
-              A fun productivity website with a pomodoro timer, a tasklist, and
-              a bunch of unique customizations and games
+            <WorkGridItem
+              id="snake_game"
+              title="Snake Game"
+              thumbnail={thumbSnakeGame}
+            >
+              In this rendition of the classic Snake Game, players guide a snake
+              to collect preys scattered across the playing field.
             </WorkGridItem>
           </Section>
           <Section>
             <WorkGridItem
-              id="elec291_project"
-              title="Magnetic Field Controlled Robot"
-              thumbnail={thumbMagneticCar}
+              id="chat_application"
+              title="Chat Application"
+              thumbnail={thumbChatApplication}
             >
-              A magnetic field controlled car with a PIC32 Timer Interrupt that
-              measures signal pauses from a joystick controller at millisecond
-              precision, which then converts to movement instructions
+              As a vital component of our CPEN333A course project, we have
+              developed a Simple Chat Application.
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem id="prodoro" title="Prodoro" thumbnail={thumbProdoro}>
+              A fun productivity website with a pomodoro timer, a tasklist, and
+              a bunch of unique customizations and games
             </WorkGridItem>
           </Section>
           <Section>
@@ -44,6 +60,24 @@ const Projects = () => {
               provides a graphical interface to place cities on a 2D grid and
               then run different algorithms to find the shortest path that
               visits all cities.
+            </WorkGridItem>
+          </Section>
+        </SimpleGrid>
+
+        {/* Hardware Projects Section */}
+        <Heading as="h4" fontSize={18} mt={10} mb={4}>
+          Hardware Projects
+        </Heading>
+        <SimpleGrid columns={[1, 1, 2]} gap={6}>
+          <Section>
+            <WorkGridItem
+              id="elec291_project"
+              title="Magnetic Field Controlled Robot"
+              thumbnail={thumbMagneticCar}
+            >
+              A magnetic field controlled car with a PIC32 Timer Interrupt that
+              measures signal pauses from a joystick controller at millisecond
+              precision, which then converts to movement instructions
             </WorkGridItem>
           </Section>
           <Section>

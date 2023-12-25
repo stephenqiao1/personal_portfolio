@@ -63,7 +63,7 @@ const Page = () => {
           <Paragraph>
             Stephen Qiao is an undergraduate student at UBC (University of
             British Columbia), studying electrical engineering. He has a passion
-            for Space, AI, and anything related to physics and engineering. When
+            for Space, AI, Robotics, and anything related to innovative technology. When
             he is getting bored with work, he likes to spend time on his
             hobbies: reading, drawing, snowboarding, and playing the guitar.
             Currently, he is working on a big project that he hopes many will
@@ -76,7 +76,7 @@ const Page = () => {
             >
               Prodoro
             </Link>
-            .
+            . He also spends some of his time contributing to UBC Rover as Software-Science Integration Lead.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/projects" passHref>
@@ -93,6 +93,22 @@ const Page = () => {
           <BioSection>
             <BioYear>2001</BioYear>
             Born in Toronto, Canada.
+          </BioSection>
+          <BioSection>
+          <BioYear>2012</BioYear>
+            Moved to Shanghai, China for middle school
+          </BioSection>
+          <BioSection>
+          <BioYear>2015</BioYear>
+            Moved back to Toronto, Canada for high school
+          </BioSection>
+          <BioSection>
+          <BioYear>2019</BioYear>
+            Attended undergraduate at The University of British Columbia
+          </BioSection>
+          <BioSection>
+          <BioYear>2024</BioYear>
+            Interned at Salyx Medical
           </BioSection>
         </Section>
         <Section delay={0.3}>
