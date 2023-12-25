@@ -1,17 +1,17 @@
 {
-  "/_app": "pages/_app.js",
-  "/books": "pages/books.html",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html",
   "/experience": "pages/experience.html",
+  "/_app": "pages/_app.js",
+  "/404": "pages/404.html",
+  "/books": "pages/books.html",
   "/": "pages/index.html",
   "/projects": "pages/projects.html",
-  "/skills": "pages/skills.html",
-  "/projects/chat_application": "pages/projects/chat_application.js",
-  "/projects/elec291_project": "pages/projects/elec291_project.js",
-  "/projects/tsp_sim": "pages/projects/tsp_sim.js",
-  "/projects/snake_game": "pages/projects/snake_game.js",
   "/projects/gesture_cv": "pages/projects/gesture_cv.js",
-  "/projects/prodoro": "pages/projects/prodoro.js"
+  "/projects/prodoro": "pages/projects/prodoro.js",
+  "/projects/chat_application": "pages/projects/chat_application.js",
+  "/skills": "pages/skills.html",
+  "/projects/elec291_project": "pages/projects/elec291_project.js",
+  "/projects/snake_game": "pages/projects/snake_game.js",
+  "/projects/tsp_sim": "pages/projects/tsp_sim.js"
 }

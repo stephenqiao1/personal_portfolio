@@ -21,7 +21,7 @@ const WorkExperience = () => {
         <VStack spacing={6} align="stretch">
           <Section>
             <Heading as="h4" fontSize={16}>
-              Electronics Prototype Engineer
+              Electronics Prototype Engineer Intern
             </Heading>
             <Text fontWeight="bold">Salyx Medical</Text>
             <Text fontSize="sm" color="gray.500">
