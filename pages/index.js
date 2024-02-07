@@ -45,13 +45,12 @@ const Page = () => {
             align="center"
           >
             <Image
-              borderColor="whiteAlpha.800"
               borderWidth={2}
               borderStyle="solid"
               maxWidth="100px"
               display="inline-block"
               borderRadius="full"
-              src="../public/images/stephen.jpg"
+              src="/images/contents/stephen.jpg"
               alt="Profile Image"
             />
           </Box>
