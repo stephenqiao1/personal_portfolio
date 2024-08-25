@@ -25,7 +25,7 @@ const WorkExperience = () => {
             </Heading>
             <Text fontWeight="bold">Salyx Medical</Text>
             <Text fontSize="sm" color="gray.500">
-              January 2024 - Present
+              January 2024 - August 2024
             </Text>
             <Box mt={2}>
               <Text fontWeight="semibold">Company Description:</Text>
@@ -43,43 +43,20 @@ const WorkExperience = () => {
             <Box mt={2}>
               <Text fontWeight="semibold">Responsibilities:</Text>
               <UnorderedList>
-                <ListItem>PCB prototype design in various materials using KiCAD</ListItem>
-                <ListItem>Electronic design according to FCC guidelines</ListItem>
-                <ListItem>Electronic analog filtering to increase signal-to-noise ratio</ListItem>
+                <ListItem>Designed and improved 5+ PCB prototypes for chargers, MVPs, and development kits utilizing KiCAD, demonstrating a
+                strong understanding of both analog and digital circuits</ListItem>
+                <ListItem>Engaged in implementation of state-of-the-art bio-sensors, and electronic components, furthering the company’s position at the
+                forefront of MedTech innovation</ListItem>
+                <ListItem>Contributed to the redesign of a medical device MVP, achieving a 20% increase in power efficiency and a 15% improvement in
+                accuracy for PPG and ECG monitoring</ListItem>
                 <ListItem>Component selection, BOM creation, and sourcing of electronic components</ListItem>
                 <ListItem>Soldering, assembling, and installing electronic components using electronic testing equipment such as oscilloscope, signal generator, power supply, multi-meter, etc.</ListItem>
-                <ListItem>Assures electronic prototype quality by designing testing methods</ListItem>
+                <ListItem>Programmed and integrated ESP32 with FreeRTOS for control of PCB functionalities, implemented BLE connections for
+                seamless interfacing with the MVP, and developed Wi-Fi connectivity solutions for mobile device integration</ListItem>
                 <ListItem>Electronic process and research documentation for knowledge transfer</ListItem>
-                <ListItem>3DCAD and 3D printing usage to support enclosure design around PCB</ListItem>
-                <ListItem>Preparation for PCB mass production and manufacturing</ListItem>
-                <ListItem>Research and development of state-of-the-art bio-sensors and electronic components</ListItem>
-                {/* Add more list items as needed */}
-              </UnorderedList>
-            </Box>
-          </Section>
-
-          <Section>
-            <Heading as="h4" fontSize={16}>
-              Previous Job Title
-            </Heading>
-            <Text fontWeight="bold">Previous Company Name</Text>
-            <Text fontSize="sm" color="gray.500">
-              Start Date - End Date
-            </Text>
-            <Box mt={2}>
-              <Text fontWeight="semibold">
-                Overview of [Previous Company Name]:
-              </Text>
-              <Text>
-                Brief description of the previous company, its sector, and its
-                core offerings.
-              </Text>
-            </Box>
-            <Box mt={2}>
-              <Text fontWeight="semibold">Responsibilities:</Text>
-              <UnorderedList>
-                <ListItem>First key task or responsibility</ListItem>
-                <ListItem>Second key task or responsibility</ListItem>
+                <ListItem>Led an entire project to build a testing device simulating the MVP of Salyx Medical, utilizing FreeRTOS, NimBLE, firmware,
+                and embedded programming to create a device capable of connecting to the app via BLE and simulating realistic vitals data.</ListItem>
+                <ListItem>Directed the electrical design of a project for Salyx Medical's sister company, developing the electrical system by designing PCBs to efficiently charge a lithium battery using solar cells. </ListItem>
                 {/* Add more list items as needed */}
               </UnorderedList>
             </Box>

@@ -64,7 +64,7 @@ const Page = () => {
             British Columbia), studying electrical engineering. He has a passion
             for Space, AI, Robotics, and anything related to innovative technology. When
             he is getting bored with work, he likes to spend time on his
-            hobbies: reading, drawing, snowboarding, and playing the guitar.
+            hobbies: reading, snowboarding, and playing the guitar.
             Currently, he is working on a big project that he hopes many will
             love called{' '}
             <Link
@@ -108,6 +108,10 @@ const Page = () => {
           <BioSection>
           <BioYear>2024</BioYear>
             Interned at Salyx Medical
+          </BioSection>
+          <BioSection>
+            <BioYear>2024 - 2025</BioYear>
+            Interned at Bosch
           </BioSection>
         </Section>
         <Section delay={0.3}>

@@ -11,13 +11,14 @@ const Books = () => {
     { title: 'Stolen Focus', author: 'Johann Hari', rating: 4},
     { title: 'Flowers for Algernon', author: 'Daniel Keyes', rating: 4.5},
     { title: 'Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future', author: 'Ashlee Vance', rating: 3.7},
-    { title: 'If We Were Villians', author: 'M.L. Rio', rating: 3.75}
+    { title: 'If We Were Villians', author: 'M.L. Rio', rating: 3.75},
+    { title: 'No Longer Human', author: 'Osamu Dazai', rating: 4.0}
 
     // Add more finished books here
   ]
 
   const readingBooks = [
-    { title: 'Physics of The Future', author: 'Michio Kaku'}
+    // { title: 'Physics of The Future', author: 'Michio Kaku'}
   ]
 
   return (
