@@ -45,7 +45,7 @@ const WorkExperience = () => {
               <UnorderedList>
                 <ListItem>Designed and improved 5+ PCB prototypes for chargers, MVPs, and development kits utilizing KiCAD, demonstrating a
                 strong understanding of both analog and digital circuits</ListItem>
-                <ListItem>Engaged in implementation of state-of-the-art bio-sensors, and electronic components, furthering the company’s position at the
+                <ListItem>Engaged in implementation of state-of-the-art bio-sensors, and electronic components, furthering the company&apos;s position at the
                 forefront of MedTech innovation</ListItem>
                 <ListItem>Contributed to the redesign of a medical device MVP, achieving a 20% increase in power efficiency and a 15% improvement in
                 accuracy for PPG and ECG monitoring</ListItem>
@@ -56,7 +56,7 @@ const WorkExperience = () => {
                 <ListItem>Electronic process and research documentation for knowledge transfer</ListItem>
                 <ListItem>Led an entire project to build a testing device simulating the MVP of Salyx Medical, utilizing FreeRTOS, NimBLE, firmware,
                 and embedded programming to create a device capable of connecting to the app via BLE and simulating realistic vitals data.</ListItem>
-                <ListItem>Directed the electrical design of a project for Salyx Medical's sister company, developing the electrical system by designing PCBs to efficiently charge a lithium battery using solar cells. </ListItem>
+                <ListItem>Directed the electrical design of a project for Salyx Medical&apos;s sister company, developing the electrical system by designing PCBs to efficiently charge a lithium battery using solar cells. </ListItem>
                 {/* Add more list items as needed */}
               </UnorderedList>
             </Box>
