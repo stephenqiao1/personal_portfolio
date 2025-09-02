@@ -9,6 +9,7 @@ import thumbTsp from '../public/images/projects/tsp_sim.jpg'
 import thumbGesture from '../public/images/projects/gesture.jpg'
 import thumbSnakeGame from '../public/images/projects/snake_game.png'
 import thumbChatApplication from '../public/images/projects/chat_application.png'
+import thumbRoboticWrist from '../public/images/projects/robotic_wrist.jpg'
 
 const Projects = () => {
   return (
@@ -91,6 +92,17 @@ const Projects = () => {
               Raspberry Pi 4 and a USB camera, the system captures real-time
               video to recognize specific hand gestures, which then triggers a
               relay module to control a light source.
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id="robotic_wrist"
+              title="High-Frequency Shape-Drawing Robotic Wrist"
+              thumbnail={thumbRoboticWrist}
+            >
+              A 2 DOF robotic wrist with laser pointer end effector capable of
+              drawing complex shapes at high frequencies. Features PID control,
+              sensor integration with FDD, and Bluetooth remote control via ESP32.
             </WorkGridItem>
           </Section>
         </SimpleGrid>

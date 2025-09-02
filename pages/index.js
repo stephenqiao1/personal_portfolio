@@ -65,17 +65,6 @@ const Page = () => {
             for Space, AI, Robotics, and anything related to innovative technology. When
             he is getting bored with work, he likes to spend time on his
             hobbies: reading, snowboarding, and playing the guitar.
-            Currently, he is working on a big project that he hopes many will
-            love called{' '}
-            <Link
-              as={NextLink}
-              href="/projects/prodoro"
-              passHref
-              scroll={false}
-            >
-              Prodoro
-            </Link>
-            . He also spends some of his time contributing to UBC Rover as Software-Science Integration Lead.
           </Paragraph>
           <Box align="center" my={4}>
             <NextLink href="/projects" passHref>
@@ -158,11 +147,11 @@ const Page = () => {
           <Heading as="h3" variant="section-title">
             Resume
           </Heading>
-          <Link href="/docs/resume.pdf" isExternal>
+          {/* <Link href="/docs/resume.pdf" isExternal>
             <Button variant="ghost" colorScheme="teal">
               Download My Resume
             </Button>
-          </Link>
+          </Link> */}
         </Section>
       </Container>
     </Layout>
