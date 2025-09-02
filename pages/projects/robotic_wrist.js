@@ -30,7 +30,7 @@ const Project = () => (
         Successfully integrated mechanical and electronic components, demonstrating a fully functional prototype. Conducted rigorous testing to validate the design, control logic, and overall system performance.
       </P>
       <P>
-        Integrated Bluetooth via ESP32 for remote control and implemented an ultrasonic sensor to detect wall distances, enabling precise manual and automatic adjustments of the shape's proportion.
+        Integrated Bluetooth via ESP32 for remote control and implemented an ultrasonic sensor to detect wall distances, enabling precise manual and automatic adjustments of the shape&apos;s proportion.
       </P>
       <List ml={4} my={4}>
         <ListItem>

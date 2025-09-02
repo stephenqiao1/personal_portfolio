@@ -1,9 +1,18 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/projects": "pages/projects.js",
-  "/404": "pages/404.js",
-  "/projects/robotic_wrist": "pages/projects/robotic_wrist.js"
+  "/404": "pages/404.html",
+  "/experience": "pages/experience.html",
+  "/books": "pages/books.html",
+  "/_error": "pages/_error.js",
+  "/skills": "pages/skills.html",
+  "/projects": "pages/projects.html",
+  "/": "pages/index.html",
+  "/projects/elec291_project": "pages/projects/elec291_project.js",
+  "/projects/gesture_cv": "pages/projects/gesture_cv.js",
+  "/projects/chat_application": "pages/projects/chat_application.js",
+  "/projects/prodoro": "pages/projects/prodoro.js",
+  "/projects/snake_game": "pages/projects/snake_game.js",
+  "/projects/robotic_wrist": "pages/projects/robotic_wrist.js",
+  "/projects/tsp_sim": "pages/projects/tsp_sim.js"
 }
