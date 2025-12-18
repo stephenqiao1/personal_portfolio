@@ -19,7 +19,9 @@ import ThemeToggleButton from './theme-toggle-button'
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  const inactiveColor = useColorModeValue('gray.600', 'gray.400')
+  const activeColor = useColorModeValue('gray.900', 'whiteAlpha.900')
+  const borderActiveColor = useColorModeValue('teal.500', 'teal.300')
 
   return (
     <Link
@@ -27,8 +29,14 @@ const LinkItem = ({ href, path, children }) => {
       href={href}
       scroll={false}
       p={2}
-      bg={active ? 'glassTeal' : undefined}
-      color={active ? '#202023' : inactiveColor}
+      color={active ? activeColor : inactiveColor}
+      fontWeight={active ? 'semibold' : 'normal'}
+      borderBottom={active ? '2px solid' : '2px solid transparent'}
+      borderColor={active ? borderActiveColor : 'transparent'}
+      _hover={{
+        color: activeColor,
+        textDecoration: 'none'
+      }}
     >
       {children}
     </Link>
@@ -43,8 +51,9 @@ const Navbar = props => {
       position="fixed"
       as="nav"
       w="100%"
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      bg={useColorModeValue('#ffffff', '#1a1a1a')}
+      borderBottom="1px"
+      borderColor={useColorModeValue('gray.200', 'gray.700')}
       zIndex={1}
       {...props}
     >
@@ -68,15 +77,19 @@ const Navbar = props => {
           alignItems="center"
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
+          spacing={6}
         >
+          <LinkItem href="/" path={path}>
+            About me
+          </LinkItem>
+          <LinkItem href="/experience" path={path}>
+            Work & Education
+          </LinkItem>
           <LinkItem href="/projects" path={path}>
             Projects
           </LinkItem>
           <LinkItem href="/skills" path={path}>
             Skills
-          </LinkItem>
-          <LinkItem href="/experience" path={path}>
-            Work Experience
           </LinkItem>
           <LinkItem href="/books" path={path}>
             Reading List
@@ -94,16 +107,16 @@ const Navbar = props => {
               />
               <MenuList>
                 <MenuItem as={NextLink} href="/">
-                  About
+                  About me
+                </MenuItem>
+                <MenuItem as={NextLink} href="/experience">
+                  Work & Education
                 </MenuItem>
                 <MenuItem as={NextLink} href="/projects">
                   Projects
                 </MenuItem>
                 <MenuItem as={NextLink} href="/skills">
                   Skills
-                </MenuItem>
-                <MenuItem as={NextLink} href="/experience">
-                  Work Experience
                 </MenuItem>
                 <MenuItem as={NextLink} href="/books">
                   Reading List

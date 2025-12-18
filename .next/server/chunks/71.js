@@ -19,7 +19,8 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_cha
 const styles = {
     global: (props)=>({
             body: {
-                bg: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("#f0e7db", "#202023")(props)
+                bg: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("#ffffff", "#1a1a1a")(props),
+                color: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("gray.800", "whiteAlpha.900")(props)
             }
         })
 };
@@ -34,14 +35,32 @@ const components = {
                 textDecorationThickness: 4,
                 marginTop: 3,
                 marginBottom: 4
+            },
+            "page-title": {
+                fontSize: {
+                    base: "2xl",
+                    md: "3xl"
+                },
+                fontWeight: "bold",
+                letterSpacing: "-0.02em"
             }
         }
     },
     Link: {
         baseStyle: (props)=>({
-                color: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("#3d7aed", "#ff63c3")(props),
-                textUnderlineOffset: 3
+                color: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("teal.600", "teal.300")(props),
+                textUnderlineOffset: 3,
+                _hover: {
+                    color: (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_1__.mode)("teal.700", "teal.200")(props),
+                    textDecoration: "underline"
+                }
             })
+    },
+    Button: {
+        baseStyle: {
+            fontWeight: "semibold",
+            borderRadius: "lg"
+        }
     }
 };
 const fonts = {

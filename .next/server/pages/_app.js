@@ -104,8 +104,8 @@ const Main = ({ children  })=>{
                 path: router.asPath
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Container, {
-                maxW: "container.md",
-                pt: 14,
+                maxW: "container.xl",
+                pt: 28,
                 children: children
             })
         ]
@@ -204,14 +204,22 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_log
 
 const LinkItem = ({ href , path , children  })=>{
     const active = path === href;
-    const inactiveColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray200", "whiteAlpha.900");
+    const inactiveColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.600", "gray.400");
+    const activeColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.900", "whiteAlpha.900");
+    const borderActiveColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("teal.500", "teal.300");
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Link, {
         as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
         href: href,
         scroll: false,
         p: 2,
-        bg: active ? "glassTeal" : undefined,
-        color: active ? "#202023" : inactiveColor,
+        color: active ? activeColor : inactiveColor,
+        fontWeight: active ? "semibold" : "normal",
+        borderBottom: active ? "2px solid" : "2px solid transparent",
+        borderColor: active ? borderActiveColor : "transparent",
+        _hover: {
+            color: activeColor,
+            textDecoration: "none"
+        },
         children: children
     });
 };
@@ -221,10 +229,9 @@ const Navbar = (props)=>{
         position: "fixed",
         as: "nav",
         w: "100%",
-        bg: (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("#ffffff40", "#20202380"),
-        style: {
-            backdropFilter: "blur(10px)"
-        },
+        bg: (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("#ffffff", "#1a1a1a"),
+        borderBottom: "1px",
+        borderColor: (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.200", "gray.700"),
         zIndex: 1,
         ...props,
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Container, {
@@ -264,7 +271,18 @@ const Navbar = (props)=>{
                         base: 4,
                         nmd: 0
                     },
+                    spacing: 6,
                     children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LinkItem, {
+                            href: "/",
+                            path: path,
+                            children: "About me"
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LinkItem, {
+                            href: "/experience",
+                            path: path,
+                            children: "Work & Education"
+                        }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LinkItem, {
                             href: "/projects",
                             path: path,
@@ -274,11 +292,6 @@ const Navbar = (props)=>{
                             href: "/skills",
                             path: path,
                             children: "Skills"
-                        }),
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LinkItem, {
-                            href: "/experience",
-                            path: path,
-                            children: "Work Experience"
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LinkItem, {
                             href: "/books",
@@ -311,7 +324,12 @@ const Navbar = (props)=>{
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.MenuItem, {
                                                 as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
                                                 href: "/",
-                                                children: "About"
+                                                children: "About me"
+                                            }),
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.MenuItem, {
+                                                as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
+                                                href: "/experience",
+                                                children: "Work & Education"
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.MenuItem, {
                                                 as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
@@ -322,11 +340,6 @@ const Navbar = (props)=>{
                                                 as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
                                                 href: "/skills",
                                                 children: "Skills"
-                                            }),
-                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.MenuItem, {
-                                                as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),
-                                                href: "/experience",
-                                                children: "Work Experience"
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.MenuItem, {
                                                 as: (next_link__WEBPACK_IMPORTED_MODULE_2___default()),

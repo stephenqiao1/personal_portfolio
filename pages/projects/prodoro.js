@@ -1,39 +1,158 @@
 import {
-    Container,
-    Badge,
-    Link,
-    List,
-    ListItem,
-  } from '@chakra-ui/react'
-  import { ExternalLinkIcon } from '@chakra-ui/icons'
-  import { Title, Meta } from '../../components/project'
-  import P from '../../components/paragraph'
-  import Layout from '../../components/layouts/article'
-  
-  const Project = () => (
+  Container,
+  Badge,
+  Box,
+  VStack,
+  Text,
+  Heading,
+  Divider,
+  useColorModeValue,
+  Link,
+  SimpleGrid,
+  Icon
+} from '@chakra-ui/react'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { Title, Meta } from '../../components/project'
+import P from '../../components/paragraph'
+import Layout from '../../components/layouts/article'
+import { motion } from 'framer-motion'
+
+const MotionBox = motion(Box)
+const MotionVStack = motion(VStack)
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
+
+const Project = () => {
+  const textColor = useColorModeValue('gray.700', 'gray.300')
+  const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
+  const cardBg = useColorModeValue('white', 'gray.800')
+  const linkColor = useColorModeValue('teal.600', 'teal.300')
+
+  return (
     <Layout title="Prodoro">
-      <Container>
+      <Container maxW="container.lg">
         <Title>
-          Prodoro <Badge>2022-</Badge>
+          Prodoro <Badge colorScheme="teal">2022-</Badge>
         </Title>
-        <P>
-          A productivity website that focuses on the pomodoro technique. 
-        </P>
-        <List ml={4} my={4}>
-          <ListItem>
-            <Meta>Website</Meta>
-            <Link href="https://www.prodoro.io/">
-              https://www.prodoro.io/ <ExternalLinkIcon mx="2px" />
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Meta>Stack</Meta>
-            <span>NodeJS, ReactJS, SQL, TailwindCSS</span>
-          </ListItem>
-        </List>
+
+        <MotionVStack
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          spacing={8}
+          align="stretch"
+        >
+        {/* Project Overview */}
+          <MotionBox variants={itemVariants}>
+            <Box
+              bg={cardBg}
+              borderRadius="xl"
+              p={6}
+              borderWidth="1px"
+              borderColor={borderColor}
+              boxShadow="md"
+              _hover={{
+                boxShadow: 'xl',
+                transform: 'translateY(-2px)'
+              }}
+              transition="all 0.3s"
+            >
+              <Heading
+                as="h2"
+                size="md"
+                fontWeight="semibold"
+                color={headingColor}
+                mb={4}
+              >
+                Project Overview
+              </Heading>
+          <P fontSize="lg" lineHeight="tall" color={textColor}>
+            A fun productivity website with a pomodoro timer, a tasklist, and a bunch of unique customizations and games.
+          </P>
+        </Box>
+          </MotionBox>
+
+          <Divider borderColor={borderColor} />
+
+        {/* Project Information */}
+          <MotionBox variants={itemVariants}>
+        <Box
+          bg={cardBg}
+          borderRadius="xl"
+          p={6}
+          borderWidth="1px"
+          borderColor={borderColor}
+              boxShadow="md"
+              _hover={{
+                boxShadow: 'xl',
+                transform: 'translateY(-2px)'
+              }}
+              transition="all 0.3s"
+        >
+          <Heading
+            as="h2"
+            size="md"
+            fontWeight="semibold"
+            color={headingColor}
+            mb={6}
+          >
+            Project Information
+          </Heading>
+          <SimpleGrid columns={[1, 2]} spacing={6}>
+              <Box>
+                <Meta>Website</Meta>
+                <Link
+                  href="https://www.prodoro.io/"
+                  target="_blank"
+                  color={linkColor}
+                    _hover={{
+                      textDecoration: 'underline',
+                      transform: 'translateX(4px)'
+                    }}
+                    transition="all 0.2s"
+                  mt={2}
+                    display="flex"
+                    alignItems="center"
+                    gap={2}
+                >
+                    <Text>https://www.prodoro.io/</Text>
+                    <Icon as={ExternalLinkIcon} />
+                </Link>
+              </Box>
+              <Box>
+                <Meta>Stack</Meta>
+                <Text mt={2} color={textColor}>
+                  NodeJS, ReactJS, SQL, TailwindCSS
+                </Text>
+              </Box>
+          </SimpleGrid>
+        </Box>
+          </MotionBox>
+        </MotionVStack>
       </Container>
     </Layout>
   )
-  
-  export default Project;
-  export { getServerSideProps } from '../../components/chakra'
+}
+
+export default Project
+export { getServerSideProps } from '../../components/chakra'

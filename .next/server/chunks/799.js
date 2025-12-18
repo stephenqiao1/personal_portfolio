@@ -77,47 +77,134 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2210);
 /* harmony import */ var _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6134);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__, _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__]);
-([_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__, _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var framer_motion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6197);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__, _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__, framer_motion__WEBPACK_IMPORTED_MODULE_4__]);
+([_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__, _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__, framer_motion__WEBPACK_IMPORTED_MODULE_4__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
 
-const Title = ({ children  })=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box, {
+
+const MotionBox = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Box);
+const MotionHeading = (0,framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading);
+const Title = ({ children  })=>{
+    const linkColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.useColorModeValue)("teal.600", "teal.300");
+    const textColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.useColorModeValue)("gray.600", "gray.400");
+    const headingColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.useColorModeValue)("gray.800", "whiteAlpha.900");
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(MotionBox, {
+        initial: {
+            opacity: 0,
+            y: -20
+        },
+        animate: {
+            opacity: 1,
+            y: 0
+        },
+        transition: {
+            duration: 0.5
+        },
+        mb: 8,
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                as: (next_link__WEBPACK_IMPORTED_MODULE_1___default()),
-                href: "/projects",
-                children: "Projects"
-            }),
-            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.HStack, {
+                spacing: 2,
+                mb: 4,
+                fontSize: "sm",
+                color: textColor,
                 children: [
-                    " ",
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__.ChevronRightIcon, {}),
-                    " "
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                        as: (next_link__WEBPACK_IMPORTED_MODULE_1___default()),
+                        href: "/projects",
+                        color: linkColor,
+                        _hover: {
+                            textDecoration: "underline"
+                        },
+                        children: "Projects"
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Icon, {
+                        as: _chakra_ui_icons__WEBPACK_IMPORTED_MODULE_3__.ChevronRightIcon
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Text, {
+                        children: "Project Details"
+                    })
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Heading, {
-                display: "inline-block",
-                as: "h3",
-                fontSize: 20,
-                mb: 4,
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(MotionHeading, {
+                as: "h1",
+                size: "xl",
+                fontWeight: "bold",
+                lineHeight: "shorter",
+                color: headingColor,
+                initial: {
+                    opacity: 0,
+                    x: -20
+                },
+                animate: {
+                    opacity: 1,
+                    x: 0
+                },
+                transition: {
+                    duration: 0.5,
+                    delay: 0.1
+                },
                 children: children
             })
         ]
     });
-const WorkImage = ({ src , alt  })=>/*#__PURE__*/ _jsx(Image, {
+};
+const WorkImage = ({ src , alt  })=>/*#__PURE__*/ _jsx(MotionBox, {
+        initial: {
+            opacity: 0,
+            scale: 0.95
+        },
+        animate: {
+            opacity: 1,
+            scale: 1
+        },
+        transition: {
+            duration: 0.5
+        },
+        whileHover: {
+            scale: 1.02
+        },
         borderRadius: "lg",
-        w: "full",
-        src: src,
-        alt: alt,
-        mb: 4
+        overflow: "hidden",
+        mb: 6,
+        boxShadow: "xl",
+        children: /*#__PURE__*/ _jsx(Image, {
+            borderRadius: "lg",
+            w: "full",
+            src: src,
+            alt: alt,
+            boxShadow: "lg"
+        })
     });
-const Meta = ({ children  })=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Badge, {
-        colorScheme: "green",
-        mr: 2,
-        children: children
+const Meta = ({ children  })=>{
+    const bgColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.useColorModeValue)("teal.50", "teal.900");
+    const textColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.useColorModeValue)("teal.800", "teal.200");
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(MotionBox, {
+        display: "inline-block",
+        whileHover: {
+            scale: 1.05
+        },
+        transition: {
+            type: "spring",
+            stiffness: 300
+        },
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.Badge, {
+            bg: bgColor,
+            color: textColor,
+            px: 3,
+            py: 1,
+            borderRadius: "md",
+            fontWeight: "semibold",
+            fontSize: "xs",
+            textTransform: "uppercase",
+            letterSpacing: "wide",
+            boxShadow: "sm",
+            children: children
+        })
     });
+};
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });

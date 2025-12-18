@@ -1,4 +1,12 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Text,
+  useColorModeValue,
+  Divider,
+  VStack
+} from '@chakra-ui/react'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
@@ -10,102 +18,145 @@ import thumbGesture from '../public/images/projects/gesture.jpg'
 import thumbSnakeGame from '../public/images/projects/snake_game.png'
 import thumbChatApplication from '../public/images/projects/chat_application.png'
 import thumbRoboticWrist from '../public/images/projects/robotic_wrist.jpg'
+import thumbCpen455 from '../public/images/projects/cpen455_project.jpg'
+import thumbBlockchainFL from '../public/images/projects/blockchain_fl.jpg'
 
 const Projects = () => {
+  const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
+  const textColor = useColorModeValue('gray.700', 'gray.300')
+  const borderColor = useColorModeValue('gray.200', 'gray.700')
+
   return (
     <Layout>
-      <Container>
-        <Heading as="h3" fontSize={20} my={4}>
-          Projects
-        </Heading>
+      <Container maxW="container.lg">
+        <VStack spacing={8} align="stretch">
+          {/* Page Title */}
+          <Section delay={0.1}>
+            <Heading
+              as="h1"
+              size="xl"
+              fontWeight="bold"
+              mb={2}
+              color={headingColor}
+            >
+              Projects
+            </Heading>
+            <Text fontSize="md" color={textColor}>
+              A collection of software and hardware projects I&apos;ve worked on.
+            </Text>
+          </Section>
 
-        {/* Software Projects Section */}
-        <Heading as="h4" fontSize={18} mb={4}>
-          Software Projects
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            <WorkGridItem
-              id="snake_game"
-              title="Snake Game"
-              thumbnail={thumbSnakeGame}
-            >
-              In this rendition of the classic Snake Game, players guide a snake
-              to collect preys scattered across the playing field.
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem
-              id="chat_application"
-              title="Chat Application"
-              thumbnail={thumbChatApplication}
-            >
-              As a vital component of our CPEN333A course project, we have
-              developed a Simple Chat Application.
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem id="prodoro" title="Prodoro" thumbnail={thumbProdoro}>
-              A fun productivity website with a pomodoro timer, a tasklist, and
-              a bunch of unique customizations and games
-            </WorkGridItem>
-          </Section>
-          <Section>
-            <WorkGridItem
-              id="tsp_sim"
-              title="Unity TSP Algorithm Visualizer"
-              thumbnail={thumbTsp}
-            >
-              This project is a Unity-based application that visualizes various
-              algorithms for solving the Traveling Salesman Problem (TSP). It
-              provides a graphical interface to place cities on a 2D grid and
-              then run different algorithms to find the shortest path that
-              visits all cities.
-            </WorkGridItem>
-          </Section>
-        </SimpleGrid>
+          <Divider borderColor={borderColor} />
 
-        {/* Hardware Projects Section */}
-        <Heading as="h4" fontSize={18} mt={10} mb={4}>
-          Hardware Projects
-        </Heading>
-        <SimpleGrid columns={[1, 1, 2]} gap={6}>
-          <Section>
-            <WorkGridItem
-              id="elec291_project"
-              title="Magnetic Field Controlled Robot"
-              thumbnail={thumbMagneticCar}
+          {/* Software Projects Section */}
+          <Section delay={0.2}>
+            <Heading
+              as="h2"
+              size="lg"
+              fontWeight="semibold"
+              mb={6}
+              color={headingColor}
             >
-              A magnetic field controlled car with a PIC32 Timer Interrupt that
-              measures signal pauses from a joystick controller at millisecond
-              precision, which then converts to movement instructions
-            </WorkGridItem>
+              Software Projects
+            </Heading>
+            <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="snake_game"
+                title="Snake Game"
+                thumbnail={thumbSnakeGame}
+              >
+                In this rendition of the classic Snake Game, players guide a snake
+                to collect preys scattered across the playing field.
+              </WorkGridItem>
+              <WorkGridItem
+                id="chat_application"
+                title="Chat Application"
+                thumbnail={thumbChatApplication}
+              >
+                As a vital component of our CPEN333A course project, we have
+                developed a Simple Chat Application.
+              </WorkGridItem>
+              <WorkGridItem id="prodoro" title="Prodoro" thumbnail={thumbProdoro}>
+                A fun productivity website with a pomodoro timer, a tasklist, and
+                a bunch of unique customizations and games
+              </WorkGridItem>
+              <WorkGridItem
+                id="tsp_sim"
+                title="Unity TSP Algorithm Visualizer"
+                thumbnail={thumbTsp}
+              >
+                This project is a Unity-based application that visualizes various
+                algorithms for solving the Traveling Salesman Problem (TSP). It
+                provides a graphical interface to place cities on a 2D grid and
+                then run different algorithms to find the shortest path that
+                visits all cities.
+              </WorkGridItem>
+              <WorkGridItem
+                id="cpen455_project"
+                title="Few-Shot Learning for Spam Detection with LLMs"
+                thumbnail={thumbCpen455}
+              >
+                A machine learning project exploring Bayesian Inverse Classification
+                for spam detection using SmolLM2-135M-Instruct. Evaluates Zero-Shot,
+                Naive Prompting, and Full Fine-Tuning approaches on the Enron dataset.
+              </WorkGridItem>
+              <WorkGridItem
+                id="blockchain_fl"
+                title="Blockchain-Based Federated Learning with Adaptive DP"
+                thumbnail={thumbBlockchainFL}
+              >
+                A federated learning system combining blockchain coordination, IPFS storage,
+                and adaptive differential privacy for trustless, privacy-preserving collaborative ML.
+              </WorkGridItem>
+            </SimpleGrid>
           </Section>
-          <Section>
-            <WorkGridItem
-              id="gesture_cv"
-              title="Gesture-Controlled Light w/ Computer Vision"
-              thumbnail={thumbGesture}
+
+          <Divider borderColor={borderColor} />
+
+          {/* Hardware Projects Section */}
+          <Section delay={0.3}>
+            <Heading
+              as="h2"
+              size="lg"
+              fontWeight="semibold"
+              mb={6}
+              color={headingColor}
             >
-              This project showcases the integration of computer vision and IoT
-              to create a gesture-controlled lighting system. Utilizing a
-              Raspberry Pi 4 and a USB camera, the system captures real-time
-              video to recognize specific hand gestures, which then triggers a
-              relay module to control a light source.
-            </WorkGridItem>
+              Hardware Projects
+            </Heading>
+            <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="elec291_project"
+                title="Magnetic Field Controlled Robot"
+                thumbnail={thumbMagneticCar}
+              >
+                A magnetic field controlled car with a PIC32 Timer Interrupt that
+                measures signal pauses from a joystick controller at millisecond
+                precision, which then converts to movement instructions
+              </WorkGridItem>
+              <WorkGridItem
+                id="gesture_cv"
+                title="Gesture-Controlled Light w/ Computer Vision"
+                thumbnail={thumbGesture}
+              >
+                This project showcases the integration of computer vision and IoT
+                to create a gesture-controlled lighting system. Utilizing a
+                Raspberry Pi 4 and a USB camera, the system captures real-time
+                video to recognize specific hand gestures, which then triggers a
+                relay module to control a light source.
+              </WorkGridItem>
+              <WorkGridItem
+                id="robotic_wrist"
+                title="High-Frequency Shape-Drawing Robotic Wrist"
+                thumbnail={thumbRoboticWrist}
+              >
+                A 2 DOF robotic wrist with laser pointer end effector capable of
+                drawing complex shapes at high frequencies. Features PID control,
+                sensor integration with FDD, and Bluetooth remote control via ESP32.
+              </WorkGridItem>
+            </SimpleGrid>
           </Section>
-          <Section>
-            <WorkGridItem
-              id="robotic_wrist"
-              title="High-Frequency Shape-Drawing Robotic Wrist"
-              thumbnail={thumbRoboticWrist}
-            >
-              A 2 DOF robotic wrist with laser pointer end effector capable of
-              drawing complex shapes at high frequencies. Features PID control,
-              sensor integration with FDD, and Bluetooth remote control via ESP32.
-            </WorkGridItem>
-          </Section>
-        </SimpleGrid>
+        </VStack>
       </Container>
     </Layout>
   )

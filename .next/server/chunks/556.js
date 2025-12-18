@@ -26,9 +26,8 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_cha
 
 
 
-const GridItem = ({ children , href , title , thumbnail  })=>{
-    ;
-    /*#__PURE__*/ _jsx(Box, {
+const GridItem = ({ children , title , thumbnail  })=>{
+    return /*#__PURE__*/ _jsx(Box, {
         w: "100%",
         align: "center",
         children: /*#__PURE__*/ _jsxs(LinkBox, {
@@ -41,13 +40,10 @@ const GridItem = ({ children , href , title , thumbnail  })=>{
                     placeholder: "blur",
                     loading: "lazy"
                 }),
-                /*#__PURE__*/ _jsx(LinkOverlay, {
-                    href: href,
-                    target: "_blank",
-                    children: /*#__PURE__*/ _jsx(Text, {
-                        mt: 2,
-                        children: title
-                    })
+                /*#__PURE__*/ _jsx(Text, {
+                    mt: 2,
+                    fontWeight: "semibold",
+                    children: title
                 }),
                 /*#__PURE__*/ _jsx(Text, {
                     fontSize: 14,
@@ -57,41 +53,75 @@ const GridItem = ({ children , href , title , thumbnail  })=>{
         })
     });
 };
-const WorkGridItem = ({ children , id , title , thumbnail  })=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Box, {
+const WorkGridItem = ({ children , id , title , thumbnail  })=>{
+    const headingColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.800", "whiteAlpha.900");
+    const textColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.600", "gray.400");
+    const borderColor = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.200", "gray.700");
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Box, {
         w: "100%",
         textAlign: "center",
+        borderRadius: "lg",
+        overflow: "hidden",
+        borderWidth: "1px",
+        borderColor: borderColor,
+        transition: "all 0.2s",
+        _hover: {
+            transform: "translateY(-4px)",
+            boxShadow: "lg",
+            borderColor: (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("teal.300", "teal.600")
+        },
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.LinkBox, {
             as: (next_link__WEBPACK_IMPORTED_MODULE_1___default()),
             href: `/projects/${id}`,
             scroll: false,
             cursor: "pointer",
+            display: "block",
             children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
-                    src: thumbnail,
-                    alt: title,
-                    className: "grid-item-thumbnail",
-                    placeholder: "blur"
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.LinkOverlay, {
-                    as: "div",
-                    href: `/projects/${id}`,
-                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Text, {
-                        mt: 2,
-                        fontSize: 20,
-                        children: title
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Box, {
+                    position: "relative",
+                    width: "100%",
+                    height: "200px",
+                    overflow: "hidden",
+                    bg: (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.useColorModeValue)("gray.100", "gray.700"),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_2___default()), {
+                        src: thumbnail,
+                        alt: title,
+                        className: "grid-item-thumbnail",
+                        placeholder: "blur",
+                        style: {
+                            objectFit: "cover",
+                            width: "100%",
+                            height: "100%"
+                        }
                     })
                 }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Text, {
-                    fontSize: 14,
-                    children: children
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Box, {
+                    p: 4,
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Text, {
+                            mt: 0,
+                            mb: 2,
+                            fontSize: "lg",
+                            fontWeight: "semibold",
+                            color: headingColor,
+                            children: title
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_3__.Text, {
+                            fontSize: "sm",
+                            color: textColor,
+                            lineHeight: "tall",
+                            children: children
+                        })
+                    ]
                 })
             ]
         })
     });
+};
 const GridItemStyle = ()=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_emotion_react__WEBPACK_IMPORTED_MODULE_4__.Global, {
         styles: `
         .grid-item-thumbnail {
-          border-radius: 12px;
+          border-radius: 0;
         }
       `
     });
@@ -132,8 +162,8 @@ const variants = {
     },
     exit: {
         opacity: 0,
-        x: -0,
-        y: 20
+        x: 0,
+        y: -20
     }
 };
 const Layout = ({ children , title  })=>{
