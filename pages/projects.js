@@ -20,6 +20,7 @@ import thumbChatApplication from '../public/images/projects/chat_application.png
 import thumbRoboticWrist from '../public/images/projects/robotic_wrist.jpg'
 import thumbCpen455 from '../public/images/projects/cpen455_project.jpg'
 import thumbBlockchainFL from '../public/images/projects/blockchain_fl.jpg'
+import thumbLeaseCheck from '../public/images/projects/leasecheck.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -107,6 +108,15 @@ const Projects = () => {
               >
                 A federated learning system combining blockchain coordination, IPFS storage,
                 and adaptive differential privacy for trustless, privacy-preserving collaborative ML.
+              </WorkGridItem>
+              <WorkGridItem
+                id="leasecheck"
+                title="LeaseCheck — Lease Compliance Auditor"
+                thumbnail={thumbLeaseCheck}
+              >
+                An AI-powered auditor that analyzes residential lease PDFs and flags
+                clauses violating landlord-tenant law, citing the specific legal rule.
+                Uses a RAG pipeline with pgvector retrieval and structured LLM review.
               </WorkGridItem>
             </SimpleGrid>
           </Section>

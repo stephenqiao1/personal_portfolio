@@ -39,7 +39,7 @@ const Page = () => {
               Stephen Qiao
             </Heading>
             <Text fontSize="lg" color={textColor}>
-              UBC Student | Aspiring Engineer & Developer
+              Electrical Engineer & Developer | UBC Graduate
             </Text>
           </VStack>
         </Section>
@@ -76,11 +76,11 @@ const Page = () => {
             </Box>
             <Box flex={1}>
               <Paragraph>
-                Stephen Qiao is an undergraduate student at UBC (University of
-                British Columbia), studying electrical engineering. He has a passion
-                for Space, AI, Robotics, and anything related to innovative technology.
-                When he is getting bored with work, he likes to spend time on his
-                hobbies: reading, snowboarding, and playing the guitar.
+                Stephen Qiao is a recent graduate of UBC (University of
+                British Columbia), where he earned his degree in electrical engineering.
+                He has a passion for Space, AI, Robotics, and anything related to innovative
+                technology. When he is getting bored with work, he likes to spend time on his
+                hobbies: reading, snowboarding, hiking, and playing the guitar.
               </Paragraph>
               <Box mt={4}>
                 <Text fontWeight="semibold" mb={2} color={headingColor}>
@@ -157,7 +157,7 @@ const Page = () => {
                   Vancouver, BC
                 </Text>
                 <Text fontSize="sm" color={textColor}>
-                  Bachelor of Applied Science in Electrical Engineering
+                  Bachelor of Applied Science in Electrical Engineering (Graduated)
                 </Text>
               </Box>
             </BioSection>
