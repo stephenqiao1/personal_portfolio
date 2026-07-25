@@ -22,6 +22,7 @@ import thumbCpen455 from '../public/images/projects/cpen455_project.jpg'
 import thumbBlockchainFL from '../public/images/projects/blockchain_fl.jpg'
 import thumbLeaseCheck from '../public/images/projects/leasecheck.png'
 import thumbSemg from '../public/images/projects/semg_decoder.png'
+import thumbMendwave from '../public/images/projects/mendwave.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -62,6 +63,16 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="mendwave"
+                title="Mendwave — AI Speech Editing"
+                thumbnail={thumbMendwave}
+              >
+                A production AI speech editor: change a word in the transcript and
+                only that span is regenerated in the original speaker&apos;s voice,
+                machine-verified, and spliced back into an otherwise bit-identical
+                master — with no stored voiceprints. Live with paying customers.
+              </WorkGridItem>
               <WorkGridItem
                 id="snake_game"
                 title="Snake Game"
