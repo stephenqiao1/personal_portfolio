@@ -23,6 +23,7 @@ import thumbBlockchainFL from '../public/images/projects/blockchain_fl.jpg'
 import thumbLeaseCheck from '../public/images/projects/leasecheck.png'
 import thumbSemg from '../public/images/projects/semg_decoder.png'
 import thumbMendwave from '../public/images/projects/mendwave.png'
+import thumbApogee from '../public/images/projects/apogee.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -63,6 +64,16 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="apogee"
+                title="Apogee — Game Backend Platform"
+                thumbnail={thumbApogee}
+              >
+                A seven-service game backend platform in Go: skill-based matchmaking,
+                Kubernetes session allocation, a NATS-to-Parquet telemetry pipeline,
+                deterministic replay, live-ops config, and synthetic load generation —
+                deployed to k3d with ArgoCD and full observability.
+              </WorkGridItem>
               <WorkGridItem
                 id="mendwave"
                 title="Mendwave — AI Speech Editing"
