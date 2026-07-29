@@ -24,6 +24,7 @@ import thumbLeaseCheck from '../public/images/projects/leasecheck.png'
 import thumbSemg from '../public/images/projects/semg_decoder.png'
 import thumbMendwave from '../public/images/projects/mendwave.png'
 import thumbApogee from '../public/images/projects/apogee.png'
+import thumbOrbitdesk from '../public/images/projects/orbitdesk.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -64,6 +65,16 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="orbitdesk"
+                title="OrbitDesk — Space Market Intelligence"
+                thumbnail={thumbOrbitdesk}
+              >
+                A space-market intelligence terminal putting the live orbital
+                catalog, the commercial supplier landscape, and the launch market
+                on one console — 16,000+ objects propagated with SGP4 in a Web
+                Worker and rendered in a single GPU draw call at 60 fps.
+              </WorkGridItem>
               <WorkGridItem
                 id="apogee"
                 title="Apogee — Game Backend Platform"
