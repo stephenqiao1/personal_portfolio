@@ -25,6 +25,7 @@ import thumbSemg from '../public/images/projects/semg_decoder.png'
 import thumbMendwave from '../public/images/projects/mendwave.png'
 import thumbApogee from '../public/images/projects/apogee.png'
 import thumbOrbitdesk from '../public/images/projects/orbitdesk.png'
+import thumbRedtape from '../public/images/projects/redtape.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -65,6 +66,16 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="redtape"
+                title="Red Tape — Municipal Permitting, Mapped"
+                thumbnail={thumbRedtape}
+              >
+                Maps municipal permitting processes — every step, fee, and
+                waiting period as a dependency graph, with a citation behind
+                every number. Jurisdiction rules are pure data: cities #2 and #3
+                shipped with zero application-code changes.
+              </WorkGridItem>
               <WorkGridItem
                 id="orbitdesk"
                 title="OrbitDesk — Space Market Intelligence"
