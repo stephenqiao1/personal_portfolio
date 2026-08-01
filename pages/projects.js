@@ -26,6 +26,7 @@ import thumbMendwave from '../public/images/projects/mendwave.png'
 import thumbApogee from '../public/images/projects/apogee.png'
 import thumbOrbitdesk from '../public/images/projects/orbitdesk.png'
 import thumbRedtape from '../public/images/projects/redtape.png'
+import thumbPapertrail from '../public/images/projects/papertrail.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -66,6 +67,17 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="papertrail"
+                title="Paper Trail — Adversarial Evals for Document AI"
+                thumbnail={thumbPapertrail}
+              >
+                A deterministic simulated economy that stress-tests an LLM
+                auditor with injected accounting errors, using a bandit adversary
+                that reweights toward whatever gets missed. The result is
+                negative — and two dramatic-looking findings turned out to be
+                bugs in the measurement apparatus.
+              </WorkGridItem>
               <WorkGridItem
                 id="redtape"
                 title="Red Tape — Municipal Permitting, Mapped"
