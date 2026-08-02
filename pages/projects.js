@@ -27,6 +27,7 @@ import thumbApogee from '../public/images/projects/apogee.png'
 import thumbOrbitdesk from '../public/images/projects/orbitdesk.png'
 import thumbRedtape from '../public/images/projects/redtape.png'
 import thumbPapertrail from '../public/images/projects/papertrail.png'
+import thumbTape from '../public/images/projects/tape.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -67,6 +68,17 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="tape"
+                title="tape — Order Book Replay & Market Surveillance"
+                thumbnail={thumbTape}
+              >
+                Replays a full trading day of NASDAQ order flow message by
+                message — 400,391 messages reconstructed with zero divergences
+                against the vendor&apos;s own book — and surfaces layering,
+                spoofing and quote-stuffing as patterns a reviewer can watch
+                unfold rather than a score they have to trust.
+              </WorkGridItem>
               <WorkGridItem
                 id="papertrail"
                 title="Paper Trail — Adversarial Evals for Document AI"
