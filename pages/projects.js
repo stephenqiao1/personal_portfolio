@@ -28,6 +28,7 @@ import thumbOrbitdesk from '../public/images/projects/orbitdesk.png'
 import thumbRedtape from '../public/images/projects/redtape.png'
 import thumbPapertrail from '../public/images/projects/papertrail.png'
 import thumbTape from '../public/images/projects/tape.png'
+import thumbDutchbook from '../public/images/projects/dutchbook.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -68,6 +69,17 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="dutchbook"
+                title="dutchbook — Prediction Market Coherence Monitor"
+                thumbnail={thumbDutchbook}
+              >
+                Watches 67,617 logical relations across the Polymarket catalog
+                for prices that cannot all be true at once, and measures how
+                long each contradiction survives — a median of 15 seconds. Only
+                3.9% cleared fees and real book depth, and the analysis ended by
+                proving its own confirmed set was two extractor bugs.
+              </WorkGridItem>
               <WorkGridItem
                 id="tape"
                 title="tape — Order Book Replay & Market Surveillance"
