@@ -29,6 +29,7 @@ import thumbRedtape from '../public/images/projects/redtape.png'
 import thumbPapertrail from '../public/images/projects/papertrail.png'
 import thumbTape from '../public/images/projects/tape.png'
 import thumbDutchbook from '../public/images/projects/dutchbook.png'
+import thumbMuster from '../public/images/projects/muster.png'
 
 const Projects = () => {
   const headingColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -69,6 +70,18 @@ const Projects = () => {
               Software Projects
             </Heading>
             <SimpleGrid columns={[1, 1, 2]} gap={8}>
+              <WorkGridItem
+                id="muster"
+                title="Muster — Security Dispatch Agent"
+                thumbnail={thumbMuster}
+              >
+                Watches a secured site and decides who responds: hard
+                constraints filtered in SQL, soft judgment left to the model,
+                and the eligible responders compiled into the tool schema so an
+                ineligible pick is unrepresentable rather than merely
+                forbidden. Every decision is stored with its rationale and the
+                exact state the agent saw.
+              </WorkGridItem>
               <WorkGridItem
                 id="dutchbook"
                 title="dutchbook — Prediction Market Coherence Monitor"
